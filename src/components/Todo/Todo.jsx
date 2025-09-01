@@ -6,7 +6,7 @@ export default function Todo(props) {
             <h1>UserId: {userId}</h1>
             <h1>Id: {id}</h1>
             <h1>Title: {title}</h1>
-            <h1>Completed: {completed}</h1>
+            <h1>Completed: {completed == true ? "true" : "false" }</h1>
         </div>
     )
 }

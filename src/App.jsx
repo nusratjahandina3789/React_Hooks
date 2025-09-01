@@ -2,7 +2,7 @@ import Todo from './components/Todo/Todo'
 import { useEffect, useState } from "react"
 function App() {
   // useState
-  const [demo, setDemo] = useState(5)
+  const [demo, setDemo] = useState(10)
   const handleIncrement = () => {
     if (demo > 0) {
       setDemo(demo => demo - 1);
@@ -21,8 +21,8 @@ function App() {
     <>
       <div>
         {/* useState */}
-        {demo}
-        <button onClick={handleIncrement}>Increment</button>
+        {demo}<br/>
+        <button className='button' onClick={handleIncrement}>Increment</button>
         {
           data.map((item) => (
             <div>
