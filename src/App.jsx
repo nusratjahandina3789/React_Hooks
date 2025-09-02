@@ -4,6 +4,11 @@ function App() {
   // useState
   const [demo, setDemo] = useState(10)
   const handleIncrement = () => {
+    if (demo < 10) {
+      setDemo(demo => demo + 1);
+    }
+  }
+  const handleDecrement = () => {
     if (demo > 0) {
       setDemo(demo => demo - 1);
     }
@@ -19,10 +24,14 @@ function App() {
 
   return (
     <>
-      <div>
-        {/* useState */}
+    <div>
+       {/* useState */}
         {demo}<br/>
         <button className='button' onClick={handleIncrement}>Increment</button>
+        <button className='button' onClick={handleDecrement}>Decrement</button>
+    </div>
+      <div className='useEffect'>
+       
         {
           data.map((item) => (
             <div>
